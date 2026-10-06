@@ -50,7 +50,7 @@ SET default_table_access_method = heap;
 CREATE TABLE public.games (
     game_id integer NOT NULL,
     year integer NOT NULL,
-    round character varying(50) NOT NULL,
+    round character varying NOT NULL,
     winner_id integer NOT NULL,
     opponent_id integer NOT NULL,
     winner_goals integer NOT NULL,
@@ -88,7 +88,7 @@ ALTER SEQUENCE public.games_game_id_seq OWNED BY public.games.game_id;
 
 CREATE TABLE public.teams (
     team_id integer NOT NULL,
-    name character varying(50) NOT NULL
+    name character varying NOT NULL
 );
 
 
